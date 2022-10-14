@@ -20,11 +20,8 @@ POST: http://localhost:3001/api/user/register
 BODY: {"email":"myemail@gmail.com"}
 RETURN: {
     "status": "success",
-    "result": {
-        "token": "...",
-        "email": "myemail@gmail.com"
-    },
-    "timestamp": "10/14/2022, 7:28:39 PM"
+    "message": "Email has been added.",
+    "timestamp": "10/14/2022, 7:55:13 PM"
 }
 
 # Login
