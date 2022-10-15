@@ -16,7 +16,7 @@ TO-DO API using NodeJS, MySql
 	- npm i && npm start
 
 # Register
-POST: http://localhost:3001/api/user/register
+POST: http://localhost:3001/
 BODY: {"email":"myemail@gmail.com"}
 RETURN: {
     "status": "success",
@@ -25,7 +25,7 @@ RETURN: {
 }
 
 # Login
-POST: http://localhost:3001/api/user/login
+POST: http://localhost:3001/
 BODY: {"email":"myemail@gmail.com"}
 RETURN: {
     "status": "success",
@@ -36,7 +36,7 @@ RETURN: {
     "timestamp": "10/14/2022, 7:28:39 PM"
 }
 
-# Get All to-dos
+# Get All to-dos (API)
 GET: http://localhost:3002/api/todo/[email] (ex. myemail@gmail.com)
 RETURN: {
     "status": "success",
@@ -57,7 +57,7 @@ RETURN: {
     "timestamp": "10/14/2022, 7:23:12 PM"
 }
 
-# Insert
+# Insert (API)
 PUT: http://localhost:3002/api/todo/[user_id] (ex. 1,2,3)
 BODY: {"title":"task 3"}
 RETURN: {
@@ -66,7 +66,7 @@ RETURN: {
     "timestamp": "10/14/2022, 7:33:01 PM"
 }
 
-# Update
+# Update (API)
 PATCH: http://localhost:3002/api/todo/[todo_id] (ex. 1,2,3)
 BODY: {"title":"task 3","status":0}
 RETURN: {
@@ -75,7 +75,7 @@ RETURN: {
     "timestamp": "10/14/2022, 7:33:01 PM"
 }
 
-# Delete
+# Delete (API)
 DELETE: http://localhost:3002/api/todo/[todo_id] (ex. 1,2,3)
 RETURN: {
     "status": "success",
