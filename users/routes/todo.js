@@ -6,10 +6,10 @@ const user_todos = 'user_todos';
 const todo_lists = 'todo_lists';
 
 // GET LISTS
-router.route('/:id').get((req, res, next) => {
+router.route('/:email').get((req, res, next) => {
 	const { params } = req;
-	const { id } = params;
-	req.con.query(`SELECT * FROM ${user_todos} WHERE u_id = ?`, [id], (error, result) => {
+	const { email } = params;
+	req.con.query(`SELECT * FROM ${user_todos} WHERE email = ?`, [email], (error, result) => {
 		if (error) res.json({status: 'error', message: error, timestamp: new Date().toLocaleString('en-Us', { timeZone: 'Asia/Manila' })});
 		res.json({status: 'success', result: result, timestamp: new Date().toLocaleString('en-Us', { timeZone: 'Asia/Manila' })});
 	});
